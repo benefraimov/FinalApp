@@ -8,11 +8,11 @@
     <fragment
         android:id="@+id/shiftsFragment"
         android:name="com.example.finalapp.ShiftsFragment"
-        android:label="fragment_shifts"
+        android:label="@string/Shifts"
         tools:layout="@layout/fragment_shifts" />
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.finalapp.SettingFragment"
-        android:label="SettingFragment" />
+        android:label="@string/Settings" />
 </navigation>
 

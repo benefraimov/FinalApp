@@ -4,116 +4,169 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="20"
+    android:gravity="bottom"
     android:orientation="vertical"
+    android:weightSum="17"
     tools:context=".ShiftsFragment">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="Sign Up"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:layout_weight="2"/>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@mipmap/ic_launcher_round"
-        android:layout_weight="4"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="14"
-        android:weightSum="20">
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:weightSum="5">
 
-        <Space
+        <CalendarView
+            android:id="@+id/dateOfCurrentShifts"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3"/>
+            android:layout_weight="5"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#B6B0B0"
+            android:gravity="center"
+            android:text="Day"
+            android:textColor="#090606" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#B6B0B0"
+            android:gravity="center"
+            android:text="Beginning"
+            android:textColor="#090606" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#B6B0B0"
+            android:gravity="center"
+            android:text="End"
+            android:textColor="#090606" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#B6B0B0"
+            android:gravity="center"
+            android:text="Hours"
+            android:textColor="#090606" />
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13"
+        android:background="#EBCFCF"
+        android:textColor="#090606">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        tools:ignore="BottomAppBar">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="14"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="20">
+            android:weightSum="2">
 
-            <Button
-                android:id="@+id/userEmail"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
+                android:layout_weight="1"
+                android:background="@null"
                 android:gravity="center"
-                android:hint="Insert Email"
-                android:inputType="textEmailAddress" />
+                android:text="56:26" />
 
-            <Space
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.5"/>
-            <EditText
-                android:id="@+id/userFullName"
-                android:hint="Insert Full Name"
-                android:inputType="text"
+                android:layout_weight="1"
+                android:background="@null"
                 android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"/>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"/>
-            <EditText
-                android:id="@+id/userPass"
-                android:hint="Insert Password"
-                android:inputType="textPassword"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"/>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"/>
-            <EditText
-                android:id="@+id/userSecondPass"
-                android:hint="Insert Password Again"
-                android:inputType="textPassword"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"/>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"/>
-            <EditText
-                android:id="@+id/userPhone"
-                android:hint="Insert Phone Number"
-                android:inputType="number"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"/>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
-            <Button
-                android:id="@+id/btnSignUpPage"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#FFF"
-                android:layout_weight="2"
-                android:text="sign up"/>
-
-
+                android:text="Total Hours" />
         </LinearLayout>
-        <Space
+
+
+        <Button
+            android:id="@+id/btnLogOut"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="3"/>
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:text="Log Out"
+            android:textAllCaps="false"
+            android:textColor="#606971" />
+
+        <ImageButton
+            android:id="@+id/btnAddShip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/addship" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageButton
+                android:id="@+id/btnStartShip"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:scaleType="fitEnd"
+                android:src="@mipmap/ic_start_ship_foreground" />
+
+            <ImageButton
+                android:id="@+id/btnSendMail"
+                style="@android:style/Widget.DeviceDefault.ImageButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="false"
+                android:background="@null"
+                android:cropToPadding="false"
+                android:scaleType="fitEnd"
+                android:src="@mipmap/ic_send_mail_foreground" />
+
+        </LinearLayout>
+
     </LinearLayout>
-
-
 </LinearLayout>
+
